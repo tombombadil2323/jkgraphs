@@ -3,6 +3,9 @@ import React from 'react';
 import ComposedChartVwV from './ComposedChartVwV';
 
 const kPIProvider =(props)=> {
+  if (!props.consultationData || !props.referralData || !props.networkingData  || !props.targetData || !props.clientData) {
+    return null;
+  } 
   let {consultationData,referralData, networkingData, targetData, clientData} = props;
   let provider =[]; 
   referralData.map(item => provider.push(item.Name));

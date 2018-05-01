@@ -3,8 +3,11 @@ import React from 'react';
 import PieChartVwV from './PieChartVwV';
 
 const asylStatusPie =(props)=> {
+  if (!props.clientData){
+     return null;
+  } 
   let {clientData} = props;
-  
+
   //wieviele Klienten haben welchen Aufenthaltsstatus
   let legalStatus = [];
   clientData.map(item => legalStatus.push(item.AsylumStatus));

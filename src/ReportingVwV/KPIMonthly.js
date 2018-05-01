@@ -3,6 +3,9 @@ import React from 'react';
 import BarChartVwV from './BarChartVwV';
 
 const kPIMonthly =(props)=> {
+  if (!props.consultationData || !props.referralData || !props.networkingData) {
+    return null;
+  } 
   let {consultationData, referralData, networkingData} = props;
   
   //kennzahlen pro Monat  

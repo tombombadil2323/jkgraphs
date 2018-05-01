@@ -35,7 +35,7 @@ const app = (props) => {
         referralData={referralData} 
         networkingData={networkingData} />
       <AsylStatusPie  
-        clientData={clientData}/>
+        clientData={clientData} />
       <CitizenshipStatusPie 
         clientData={clientData} />
     </div>

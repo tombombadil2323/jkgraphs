@@ -3,6 +3,9 @@ import React from 'react';
 import PieChartVwV from './PieChartVwV';
 
 const citizenshipStatusPie =(props)=> {
+    if (!props.clientData){
+        return null;
+     } 
     let {clientData} = props;
   
     //wieviele Klienten haben welche Staatsbürgerschaft?
