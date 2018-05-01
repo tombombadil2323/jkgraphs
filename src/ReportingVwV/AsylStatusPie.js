@@ -20,9 +20,12 @@ const asylStatusPie =(props)=> {
   }
   
   return (
-    <PieChartVwV 
-      data={legalStatusReportData} 
-      pieDataKey="value" />
+    <div>
+      <h3>Klienten nach Aufenthaltstatus</h3>
+      <PieChartVwV 
+        data={legalStatusReportData} 
+        pieDataKey="value" />
+    </div>
   );
 }
 

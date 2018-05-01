@@ -31,14 +31,14 @@ const kPIProvider =(props)=> {
       <h3>Kennzahlen pro Träger</h3>
       <ComposedChartVwV 
         data={reportData} 
-        xDataKey="providerName" 
+        xDataKey='providerName' 
         hide={true} 
-        bar1DataKey="Beratung" 
-        bar2DataKey="Weiterleitung" 
-        bar3DataKey="Netzwerk" 
-        labelDataKey="providerName" 
+        bar1DataKey='Beratung'
+        bar2DataKey='Weiterleitung' 
+        bar3DataKey='Netzwerk' 
         line1DataKey='Ziele' 
         line2DataKey='Klienten'/>
+        {provider.map((provider, index)=> <span key={index} style={{paddingRight:'8px'}}>{index+1}: {provider}</span>)}
     </div>
   );
 }
