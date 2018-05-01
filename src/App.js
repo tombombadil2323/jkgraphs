@@ -43,10 +43,3 @@ const app = (props) => {
 }
 
 export default app;
-
-//wieviele Klienten sind verwaltet vs registriert?
-//let totalClients = clientData.length;
-//let managedClients = clientData.filter(item => item.XXX.length)
-//meetinglocation der Beratungsgespräche
-//create target date
-//create client / registration date
