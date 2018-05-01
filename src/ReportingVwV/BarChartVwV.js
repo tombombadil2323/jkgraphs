@@ -1,5 +1,5 @@
 import React from 'react';
-import {ComposedChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Line, LabelList,  PieChart,Pie,Cell,BarChart} from 'recharts';
+import {Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, BarChart} from 'recharts';
 
 const barChartVwV =(props)=> {
   

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import RavensburgConsultation from './DATA/RavensburgConsultation.json';
 import RavensburgNetworking from './DATA/RavensburgNetworking.json';
