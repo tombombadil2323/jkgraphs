@@ -19,12 +19,11 @@ const citizenshipStatusPie =(props)=> {
         citizenshipsReportData.push(reportingObject);
     }
     citizenshipsReportData.sort((a, b)=> b.value - a.value);
-
-  
+    
     return (
-        <div>
-        <PieChartVwV data={citizenshipsReportData} pieDataKey="value" />
-        </div>
+        <PieChartVwV 
+            data={citizenshipsReportData} 
+            pieDataKey="value" /> 
     );
 }
 

@@ -20,9 +20,9 @@ const asylStatusPie =(props)=> {
   }
   
   return (
-    <div>
-    <PieChartVwV data={legalStatusReportData} pieDataKey="value" />
-    </div>
+    <PieChartVwV 
+      data={legalStatusReportData} 
+      pieDataKey="value" />
   );
 }
 

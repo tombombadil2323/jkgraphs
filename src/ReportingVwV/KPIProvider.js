@@ -17,18 +17,28 @@ const kPIProvider =(props)=> {
   for (let i = 0; i< provider.length; i++){
     let reportingObject = {
         providerName: provider[i],
-        consultations: consultationData.filter(item => item.Name === provider[i]).length,
-        referrals: referralData.filter(item => item.Name === provider[i]).length,
-        networking: networkingData.filter(item => item.Name === provider[i]).length,
-        targets: targetData.filter(item => item.Name === provider[i]).length,
-        clients: clientData.filter(item => item.Name === provider[i]).length,
+        Beratung: consultationData.filter(item => item.Name === provider[i]).length,
+        Weiterleitung: referralData.filter(item => item.Name === provider[i]).length,
+        Netzwerk: networkingData.filter(item => item.Name === provider[i]).length,
+        Ziele: targetData.filter(item => item.Name === provider[i]).length,
+        Klienten: clientData.filter(item => item.Name === provider[i]).length,
         };
         reportData.push(reportingObject);
   }
   
   return (
     <div>
-    <ComposedChartVwV data={reportData} xDataKey="providerName" hide={true} bar1DataKey="consultations" bar2DataKey="referrals" bar3DataKey="networking" labelDataKey="providerName" line1DataKey='targets' line2DataKey='clients'/>
+      <h3>Kennzahlen pro Träger</h3>
+      <ComposedChartVwV 
+        data={reportData} 
+        xDataKey="providerName" 
+        hide={true} 
+        bar1DataKey="Beratung" 
+        bar2DataKey="Weiterleitung" 
+        bar3DataKey="Netzwerk" 
+        labelDataKey="providerName" 
+        line1DataKey='Ziele' 
+        line2DataKey='Klienten'/>
     </div>
   );
 }
