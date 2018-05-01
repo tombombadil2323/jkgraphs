@@ -1,10 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import BarChartVwV from './BarChartVwV';
 
 const kPIMonthly =(props)=> {
-  if (!props.consultationData || !props.referralData || !props.networkingData) {
-    return null;
+  if (
+    !props.consultationData || 
+    !props.referralData || 
+    !props.networkingData) {
+      return null;
   } 
   let {consultationData, referralData, networkingData} = props;
   
@@ -38,5 +42,10 @@ const kPIMonthly =(props)=> {
       
   );
 }
+kPIMonthly.propTypes = {
+  consultationData: PropTypes.array.isRequired,
+  referralData: PropTypes.array.isRequired, 
+  networkingData: PropTypes.array.isRequired, 
+};
 
 export default kPIMonthly;

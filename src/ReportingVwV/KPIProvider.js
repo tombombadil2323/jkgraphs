@@ -1,10 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import ComposedChartVwV from './ComposedChartVwV';
 
 const kPIProvider =(props)=> {
-  if (!props.consultationData || !props.referralData || !props.networkingData  || !props.targetData || !props.clientData) {
-    return null;
+  if (
+    !props.consultationData || 
+    !props.referralData || 
+    !props.networkingData  || 
+    !props.targetData || 
+    !props.clientData) {
+      return null;
   } 
   let {consultationData,referralData, networkingData, targetData, clientData} = props;
   let provider =[]; 
@@ -45,5 +51,11 @@ const kPIProvider =(props)=> {
     </div>
   );
 }
-
+kPIProvider.propTypes = {
+  consultationData: PropTypes.array.isRequired,
+  referralData: PropTypes.array.isRequired, 
+  networkingData: PropTypes.array.isRequired, 
+  targetData: PropTypes.array.isRequired, 
+  clientData: PropTypes.array.isRequired,
+};
 export default kPIProvider;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import PieChartVwV from './PieChartVwV';
 
@@ -31,5 +32,7 @@ const asylStatusPie =(props)=> {
     </div>
   );
 }
-
+asylStatusPie.propTypes = {
+  clientData: PropTypes.array.isRequired,
+};
 export default asylStatusPie;
