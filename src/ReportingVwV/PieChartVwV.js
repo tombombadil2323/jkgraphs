@@ -2,7 +2,7 @@ import React from 'react';
 import {ComposedChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Line, LabelList,  PieChart,Pie,Cell,} from 'recharts';
 
 const pieChartVwV =(props)=> {
-    const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+    const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042','#AABB00'];
     return (
         <div>
             <PieChart width={900} height={700} data={props.data}>
