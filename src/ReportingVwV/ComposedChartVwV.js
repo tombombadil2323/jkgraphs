@@ -1,7 +1,7 @@
 import React from 'react';
 import {ComposedChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Line,} from 'recharts';
 
-const composedChartVwV =(props)=> {
+const ComposedChartVwV =(props)=> {
   
   return (
     <div>
@@ -22,4 +22,4 @@ const composedChartVwV =(props)=> {
   );
   }
 
-export default composedChartVwV;
+export default ComposedChartVwV;

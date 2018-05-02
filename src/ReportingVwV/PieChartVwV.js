@@ -1,7 +1,7 @@
 import React from 'react';
 import {Tooltip, Legend, PieChart,Pie,Cell,} from 'recharts';
 
-const pieChartVwV =(props)=> {
+const PieChartVwV =(props)=> {
     const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042','#AABB00'];
     return (
         <div>
@@ -24,4 +24,4 @@ const pieChartVwV =(props)=> {
     );
   }
 
-export default pieChartVwV;
+export default PieChartVwV;

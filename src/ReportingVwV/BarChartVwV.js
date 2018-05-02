@@ -1,7 +1,7 @@
 import React from 'react';
 import {Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, BarChart} from 'recharts';
 
-const barChartVwV =(props)=> {
+const BarChartVwV =(props)=> {
   
   return (
     <div>
@@ -20,4 +20,4 @@ const barChartVwV =(props)=> {
   );
   }
 
-export default barChartVwV;
+export default BarChartVwV;
