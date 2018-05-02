@@ -3,14 +3,13 @@ import PropTypes from 'prop-types';
 
 import BarChartVwV from './BarChartVwV';
 
-const kPIMonthly =(props)=> {
+const KPIMonthly =({consultationData, referralData, networkingData}, ...props)=> {
   if (
-    !props.consultationData || 
-    !props.referralData || 
-    !props.networkingData) {
+    !consultationData || 
+    !referralData || 
+    !networkingData) {
       return null;
   } 
-  let {consultationData, referralData, networkingData} = props;
   
   //kennzahlen pro Monat  
   let months = ['Januar', 'Februar', 'März', 'April','Mai','Juni','Juli','August','September', 'Oktober','November','Dezember'];
@@ -21,9 +20,9 @@ const kPIMonthly =(props)=> {
     let regExpressionOctDec = new RegExp('2018-1'+(i-9));
     let reportingObject = {
       Monat: months[i],
-      Beratung: consultationData.filter(item => regExpressionJanSep.test(item.Date)||regExpressionOctDec.test(item.Date)).length ,
-      Weiterleitung: referralData.filter(item => regExpressionJanSep.test(item.Date)||regExpressionOctDec.test(item.Date)).length,
-      Netzwerk: networkingData.filter(item => regExpressionJanSep.test(item.Date)||regExpressionOctDec.test(item.Date)).length,
+      Beratung: consultationData.filter(item => regExpressionJanSep.test(item.date)||regExpressionOctDec.test(item.date)).length ,
+      Weiterleitung: referralData.filter(item => regExpressionJanSep.test(item.date)||regExpressionOctDec.test(item.date)).length,
+      Netzwerk: networkingData.filter(item => regExpressionJanSep.test(item.date)||regExpressionOctDec.test(item.date)).length,
     };
     monthlyReportData.push(reportingObject);
   }
@@ -42,10 +41,10 @@ const kPIMonthly =(props)=> {
       
   );
 }
-kPIMonthly.propTypes = {
+KPIMonthly.propTypes = {
   consultationData: PropTypes.array.isRequired,
   referralData: PropTypes.array.isRequired, 
   networkingData: PropTypes.array.isRequired, 
 };
 
-export default kPIMonthly;
+export default KPIMonthly;
